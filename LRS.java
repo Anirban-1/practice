@@ -20,6 +20,7 @@ class LRS
 				else dp[i][j]=Math.max(dp[i+1][j],dp[i][j+1]);
 			}
 		}
+		// building the result string
 		String res="";
 		for(int i=0;i<=n-2;i++)
 			if(dp[i][i]>dp[i+1][i+1])res+=ar[i];
