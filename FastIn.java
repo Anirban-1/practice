@@ -1,5 +1,3 @@
-import java.io.*;
-import java.util.*;
 class FastIn{
 	private static BufferedReader br;
 	private static StringTokenizer st;
