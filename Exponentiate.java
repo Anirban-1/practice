@@ -5,13 +5,19 @@ public class Exponentiate{
         this.exp = exp;
     }
     public int getValue(){
+        // Fast exponentiation
         int ans=1;
         while(exp>0){
-            if(exp%2!=0)
-                ans = base*ans*ans;
-            else ans=ans*ans;
+            if(exp%2!=0){
+                ans*=base;
+            }
+            base=base*base;
             exp/=2;
         }
         return ans;
+    }
+    public static void main(String[] args) {
+        Exponentiate e=new Exponentiate(3,3);
+        System.out.println(e.getValue());
     }
 }
